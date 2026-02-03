@@ -11,7 +11,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from app.core.database import Base
 
 
-class Products(Base):
+class Product(Base):
     """
     SQLAlchemy ORM model representing the 'products' table.
     """

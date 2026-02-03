@@ -2,12 +2,11 @@ import uuid
 
 from sqlalchemy import Column, Integer, DECIMAL, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
-import uuid
 
 from app.core.database import Base
 
 
-class OrderItems(Base):
+class OrderItem(Base):
     """
     SQLAlchemy ORM model representing the 'order_items' table.
     """

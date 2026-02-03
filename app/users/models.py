@@ -7,7 +7,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from app.core.database import Base
 
 
-class Users(Base):
+class User(Base):
     """
     SQLAlchemy ORM model representing the 'users' table.
     """

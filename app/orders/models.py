@@ -8,7 +8,7 @@ from sqlalchemy_utils import ChoiceType
 from app.core.database import Base
 
 
-class Orders(Base):
+class Order(Base):
     """
     SQLAlchemy ORM model representing the 'orders' table.
     """
