@@ -178,3 +178,5 @@ pyrightconfig.json
 # alembic
 alembic/versions/*.pyc
 alembic/versions/__pycache__/
+
+*.db
