@@ -8,9 +8,7 @@ from alembic import context
 import sys
 import os
 
-absolute_path = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), '..', 'app', 'core')
-)
+absolute_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 sys.path.append(absolute_path)
 
@@ -27,7 +25,8 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-from database import Base  # noqa: E402
+from app.core.database import Base  # noqa: E402
+from app import models  # noqa
 
 target_metadata = Base.metadata
 
