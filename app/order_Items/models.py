@@ -1,4 +1,6 @@
-from sqlalchemy import Column, Integer, Decimal, ForeignKey
+import uuid
+
+from sqlalchemy import Column, Integer, DECIMAL, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
 
@@ -16,7 +18,7 @@ class OrderItems(Base):
     order_id = Column('order_id', ForeignKey('orders.id'))
     product_id = Column('order_id', ForeignKey('products.id'))
     quantity = Column('quantity', Integer(), default=1)
-    unity_price = Column('total_pice', Decimal(10, 2), default=0)
+    unity_price = Column('total_pice', DECIMAL(10, 2), default=0)
 
     # constructor
     def __init__(self, order_id, product_id, unity_price, quantity=1):

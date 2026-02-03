@@ -1,7 +1,7 @@
 import datetime
 import uuid
 
-from sqlalchemy import Column, String, Decimal, Date, ForeignKey
+from sqlalchemy import Column, String, Date, DECIMAL, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy_utils import ChoiceType
 
@@ -24,7 +24,7 @@ class Orders(Base):
     status = Column(
         'status', String, ChoiceType(choices=ORDER_STATUS)
     )  # PENDING | CANCELED | COMPLETED
-    total_price = Column('total_pice', Decimal(10, 2), default=0)
+    total_price = Column('total_pice', DECIMAL(10, 2), default=0)
     created_at = Column('created_at', Date, default=datetime.datetime.now)
     updated_at = Column('updated_at', Date, default=datetime.datetime.now)
 
