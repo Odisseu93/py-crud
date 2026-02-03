@@ -15,8 +15,10 @@ class Orders(Base):
 
     __tablename__ = 'orders'
 
-    ORDER_STATUS = ('PENDING', 'PENDING')('CANCELED', 'CANCELED')(
-        'COMPLETED', 'COMPLETED'
+    ORDER_STATUS = (
+        ('PENDING', 'PENDING'),
+        ('CANCELED', 'CANCELED'),
+        ('COMPLETED', 'COMPLETED'),
     )
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid7)
